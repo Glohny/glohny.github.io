@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CircuitHub · Rohan Yusaf</title>
+<meta name="description" content="Production operator at CircuitHub, a PCB assembly company: solder paste printing, reflow, collaborative robots and automation build-out.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<nav class="top" aria-label="Main">
+  <span class="me"><a href="index.html" style="color:inherit;text-decoration:none">Rohan Yusaf</a> <a class="crumb" href="index.html">/ All projects</a></span>
+  <div class="links">
+    <a href="plotter.html">Pen plotter</a>
+    <a href="circuithub.html">CircuitHub</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero band" id="top">
+  <div class="in">
+    <h1>CircuitHub</h1>
+    <p class="lede" style="margin-top:14px">CircuitHub assembles printed circuit boards for hardware companies. I worked on the production floor part-time while in school, and over time moved toward the automation side.</p>
+    <div class="role"><span>Production operator</span><span>Part-time, 2025 to 2026</span><span>Massachusetts</span></div>
+  </div>
+</header>
+
+<main>
+<section class="band">
+  <div class="in">
+    <div class="cols">
+      <div>
+        <h3>Production</h3>
+        <ul>
+          <li>Ran Mycronic solder paste printers</li>
+          <li>Ran reflow ovens</li>
+          <li>Operated a UR collaborative robot arm</li>
+          <li>Inspected and reworked assembled boards</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Automation</h3>
+        <ul>
+          <li>Helped build out the pneumatic cabinets for an automated gantry, mounting sensors and components</li>
+          <li>Helped a coworker recover and realign a UR10 arm</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Things I made</h3>
+        <ul>
+          <li>Designed and 3D printed custom vise jaws</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:clamp(36px,5vw,56px)">What I used</h3>
+    <div class="chips">
+      <span>SMT assembly</span><span>Solder paste printing</span><span>Reflow</span><span>Board inspection and rework</span><span>Collaborative robots</span><span>CAD</span><span>3D printing</span>
+    </div>
+  </div>
+</section>
+
+<section class="band" style="padding-top:0">
+  <div class="in">
+    <a class="linkcard" href="plotter.html">
+      <video src="img/build.mp4" poster="img/video-poster.jpg" muted loop playsinline preload="metadata" data-auto aria-label="The pen plotter drawing the CircuitHub logo"></video>
+      <div>
+        <h2 style="margin-bottom:10px">My plotter drew the CircuitHub logo</h2>
+        <p style="color:var(--muted)">The pen plotter I designed and built at home, then measured for accuracy.</p>
+        <span class="go">See the pen plotter</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="band" style="padding-top:0">
+  <div class="in backbar">
+    <a class="pill alt" href="index.html">All projects</a>
+    <a class="pill" href="plotter.html">Next: Pen plotter</a>
+  </div>
+</section>
+</main>
+<footer class="band" id="contact">
+  <div class="in row">
+    <h2>Get in touch</h2>
+    <div class="links">
+      <a href="mailto:rohanyusaf@protonmail.com">rohanyusaf@protonmail.com</a>
+      <a href="https://www.linkedin.com/in/rohan-yusaf-605a70386">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+{
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.querySelectorAll("video[data-auto]").forEach(v => {
+  if (reduce) return;
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) v.play().catch(() => {}); else v.pause(); }), {threshold: .3});
+  io.observe(v);
+});
+}
+</script>
+</body>
+</html>
